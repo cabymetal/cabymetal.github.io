@@ -6,6 +6,5 @@ $('a.nav-link').click(function(event){
 });
 
 $( document ).ready(function() {
-    event.preventDefault();
     $('#content').load($("#home").attr('href'));
 });
