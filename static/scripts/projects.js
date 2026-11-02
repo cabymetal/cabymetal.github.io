@@ -21,6 +21,21 @@ const PROJECTS = [
     }
   },
   {
+    id: 'ai-startup',
+    category:'programming',
+    tags: ['telegrambot', 'Python', 'DesignPatterns'],
+    url: 'https://github.com/cabymetal/ai_startup',
+    linkType: 'github',
+    title: {
+      en: 'Telegram Bot assisted AI tool',
+      es: 'Bot de Telegram asistido por AI'
+    },
+    description: {
+      en: 'A Telegram bot designed to implement 2 Business ideas I have, one related to tourism and another related to sports. Repo is private request access through contact info',
+      es: 'Un bot de Telegram diseñado para implementar pruebas de concepto sobre dos ideas de negocio que tengo, una relacionada con turismo y otra relacionada con deportes. Repo es privado requiere acceso por info de contacto'
+    }
+  },
+  {
     id: 'aws-lambda-architecture',
     category: 'data-eng',
     tags: ['Kinesis', 'Lambda', 'Glue', 'Athena', 'DynamoDB', 'EC2', 'Kibana'],
