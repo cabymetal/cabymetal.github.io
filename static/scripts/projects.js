@@ -71,6 +71,11 @@ const PROJECTS = [
     tags: ['Python', 'MySQL', 'Docker', 'Regex', 'Logging'],
     url: 'mailto:carlosalbertomurillomartinez@gmail.com?subject=Solicitud%20acceso%20repositorio%20ETL%20%2F%20ETL%20repository%20access%20request',
     linkType: 'access',
+    image: 'static/img/python-etl.png',
+    imageAlt: {
+      en: 'OASIS admin app: screen to publish a storecheck to FTP',
+      es: 'App administrativa OASIS: pantalla para publicar un storecheck a FTP'
+    },
     title: {
       en: 'Custom Python ETL',
       es: 'ETL a la medida en Python'
@@ -161,6 +166,11 @@ const PROJECTS = [
     tags: ['Plotly Dash', 'Dash Bootstrap', 'Caching', 'Python'],
     url: 'https://gitlab.com/cabymetal/dashboard_oasis/-/tree/main?ref_type=heads',
     linkType: 'gitlab',
+    image: 'static/img/dashboard-oasis.png',
+    imageAlt: {
+      en: 'OASIS dashboard: filters and a bar chart of ground coffee sales share by manufacturer',
+      es: 'Tablero OASIS: filtros y gráfico de barras de la participación en ventas de café molido por fabricante'
+    },
     title: {
       en: 'Interactive Dashboard with Plotly Dash',
       es: 'Tablero interactivo con Plotly Dash'
@@ -211,10 +221,14 @@ function renderProjects(lang, filter, t) {
       return '<li class="tag">' + escapeHtml(tag) + '</li>';
     }).join('');
     const external = p.linkType === 'access' ? '' : ' target="_blank" rel="noopener"';
+    const image = p.image
+      ? '<img class="project-img" src="' + p.image + '" alt="' + escapeHtml(p.imageAlt[lang]) + '" loading="lazy">'
+      : '';
 
     return (
       '<div class="col-12 col-md-6 col-xl-4">' +
         '<article class="project-card">' +
+          image +
           '<span class="project-category">' + escapeHtml(t['cat.' + p.category]) + '</span>' +
           '<h3 class="project-title">' + escapeHtml(p.title[lang]) + '</h3>' +
           '<p class="project-desc">' + escapeHtml(p.description[lang]) + '</p>' +
